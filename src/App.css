@@ -1,42 +1,89 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.music_wrap {
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 30px;
+}
+.music_wrap .music_gallery {
+    width: 350px;
+}
+.music_wrap .music_gallery img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.gallery_image {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.music_wrap .music_content {
+    flex: 1;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.table_song {
+    width: 100%;
+    border-collapse: collapse;
+    clear: both;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.table_song tr {
+    border-bottom: 2px solid #8d8c8c;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.table_song th {
+    padding: 12px;
+    text-transform: uppercase;
+    text-align: left;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table_song tr th:last-child,
+.table_song tr td:last-child  {
+    text-align: right;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.table_song td {
+    padding: 12px;
+    text-transform: capitalize;
 }
-
-.card {
-  padding: 2em;
+.table_song svg {
+    display: inline-block;
 }
-
-.read-the-docs {
-  color: #888;
+.table_song .song_avatar {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.music_player {
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid darkcyan;
+    left: 0;
+    right: 0;
+    background-color: #130c1c;
+    color: #ffffff;
+}
+.player_inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    padding: 20px 40px;
+}
+.player_inner .player_name {
+    width: 20%;
+}
+.player_inner .player_control {
+    flex: 1;
+}
+.control_playpause {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.control_playpause svg {
+    display: inline-block;
+    font-size: 1.5rem;
 }
